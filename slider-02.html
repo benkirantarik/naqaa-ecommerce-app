@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slider</title>
+<body>
+    <style>
+        *{
+            transition: all 10s;
+        }
+        #slider{
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: -300px;
+        }
+
+        #slider .box,#slider .box img{
+            width: 300px;
+            height: 300px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            transform-origin: left center;  
+        }
+        @keyframes bounce {
+            0%{left: 300px;}
+            10%{left: 600px;}
+            90%{left: 600px;}
+            100%{left: 300px;}
+        }
+        .box:nth-of-type(1){
+            animation: bounce 5s ease;
+            animation-delay: 1s;
+        }
+    </style>
+    <div id="slider">
+        <div class="line">
+            <div class="box"><img src="img/products/honey/sidr/all.jpg" alt=""></div>
+            <div class="box"><img src="img/products/honey/zeter/all.jpg" alt=""></div>
+            <div class="box"><img src="img/products/honey/chawkiat/all.jpg" alt=""></div>
+            <div class="box"><img src="img/products/honey/kheroub/all.jpg" alt=""></div>
+            <div class="box"><img src="img/products/honey/kaliptus/all.jpg" alt=""></div>
+            <div class="box"><img src="img/products/honey/rbi3/all.jpg" alt=""></div>
+            <div class="box"><img src="img/products/honey/deghmous/all.jpg" alt=""></div>
+            <div class="box"><img src="img/products/honey/lemon/all.jpg" alt=""></div>
+            <div class="box"><img src="img/products/argan/all.jpg" alt=""></div>
+            <div class="box"><img src="img/products/argan_cos/all.jpg" alt=""></div>
+        </div>
+    </div>
+</body>
+</html>

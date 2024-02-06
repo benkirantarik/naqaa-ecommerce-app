@@ -1,0 +1,20 @@
+@keyframes bounce {
+    0%{transform: translateY(0px);}
+    22%{transform: translateY(-3px);}
+    33%{transform: translateY(3px);}
+    44%{transform: translateY(-6px);}
+    55%{transform: translateY(6px);}
+    66%{transform: translateY(-3px);}
+    77%{transform: translateY(3px);}
+    100%{transform: translateY(0px);}
+}
+
+@keyframes slideDown {
+    
+    0%{transform: translate(0%,-200%);}
+    80%{transform: translate(0%,200%);}
+    90%{transform: translate(-200%,200%);}
+    95%{transform: translate(-200%,-200%);}
+    100%{transform: translate(0%,-200%);}
+
+}

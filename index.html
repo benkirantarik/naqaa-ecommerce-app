@@ -1,0 +1,663 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الموقع الرسمي لشركة نقاء الطبيعة</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/home.css">
+
+    <!-- EMAIL JS  -->
+
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+        </script>
+        <script type="text/javascript">
+            (function(){
+               emailjs.init("KDkM04-Wp4904W7JR");
+            })();
+        </script>
+
+<style>
+
+</style></head>
+
+<body>
+    <div id="messamen">
+        <img src="img/messamen.png" alt="">
+    </div>
+    <div id="app" class="ar" data_products_selled_arr="">
+    <div id="layer"></div>
+    <div id="product_selled_config">
+        <i class="fa fa-close"></i>
+        <div class="title"></div>
+        <div class="photo"></div>
+        <div class="config">
+            <label for=""><b>ثمن العينة الواحدة</b><span class="price"></span></label>
+            <label for="">
+                <b>عدد العينات</b>
+                <div class="btns">
+                    <button id="btn_plus" class="fa fa-plus"></button>
+                    <input id="input_product_nums" type="number" min="1" max="" title="عدد العينات" value="1">
+                    <button id="btn_minus" class="fa fa-minus"></button>
+                </div>
+            </label>
+            <label for="">
+                <b>الثمن الإجمالي</b>
+                <span id="total_selected_product_price"></span>
+            </label>
+            <button id="save-demand-btn" onclick="addProductToCart()">تسجيل الطلب</button>
+        </div>
+        <div class="inputs"></div>
+    </div>
+        <div id="infoDiv">
+            <div class="infoDivContent">
+                <h2>معلومات حول المنتج</h2>
+                <i class="fa fa-close" title="إغلاق"></i>
+                <div class="photo">
+                    <img src="img/products/honey/zeter/1000g.jpg" alt="">
+                </div>
+                <div class="info">
+                    <label class="title"><b>اسم المنتج</b><span>عسل الدغموس</span></label>
+                    <label class="types"><b>الأحجام</b><span><i>1Kg</i><i>500g</i><i>250g</i></span></label>
+                    <label class="description"><b>معلومات المنتج</b><span>
+                        علومات المعلومات المعلومات المعلومات المعلومات المعلومات المعلومات المعلومات المعلومات المعلومات المعلومات الم
+                        علومات المعلومات المعلومات المعلومات المعلومات المعلومات المعلومات المعلومات المعلومات المعلومات المعلومات الم
+                    </span></label>
+                </div>
+            </div>
+        </div>
+        <div id="sellDiv">
+            <h2>لائحة المشتريات</h2>
+            <i class="fa fa-close" title="إغلاق"></i>
+            <table id="products-selled-table">
+            </table>
+            <div id="sell-total-div"></div>
+            <div id="confirm-btn"></div>
+        </div>
+        <div id="whatsup-slide" class=""><!--animate__animated animate__shakeY animate__infinite	infinite animate__fast -->
+            <img src="img/icons/whatsup.svg" alt="" title="+212 6 71 65 84 87">
+        </div>
+        <div class="nav animate__animated animate__delay-0s animate__slideInDown">
+            <div id="lang" data-id="ar" title="اللغة" class="bounce">
+                <span>العربية</span>
+            </div>
+            <div id="shopping-basket" title="السلة">
+                <i class="fa fa-shopping-basket"></i>
+            </div>
+            <div class="logo">
+                <img src="img/logo.png" alt="">
+            </div>
+            <div id="mobilebtn"><img src="img/mobile-menu-icon.png" alt=""></div>
+            <div class="navbar">
+                <nav>
+                    <ul>
+                        <li><a href="#" data-id="headerDiv">الصفحة الرئيسية</a></li>
+                        <li><a href="#" data-id="honeyDiv">العسل</a></li>
+                        <li><a href="#" data-id="arganDiv">زيت أركان</a></li>
+                        <li><a href="#" data-id="arganBeautyDiv">زيت أركان للتجميل</a></li>
+                        <li><a href="#" data-id="amlouDiv">أملو</a></li>
+                        <li><a href="#" data-id="zafaranDiv">الزعفران</a></li>
+                        <li><a href="#" data-id="baqatDiv">الباقات</a></li>
+                        <li><a href="#" data-id="3orodDiv">العروض</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="header" id="headerDiv" style="height: 714px;">
+            <div class="layer">
+                <div class="photo animate__animated animate__delay-1s animate__fadeInLeft">
+                    <div id="slider" class="slideUp">
+                        <div class="line">
+                            <div class="box"><img src="img/products/honey/sidr/all.jpg" alt=""></div>
+                            <div class="box"><img src="img/products/honey/zeter/all.jpg" alt=""></div>
+                            <div class="box"><img src="img/products/honey/chawkiat/all.jpg" alt=""></div>
+                            <div class="box"><img src="img/products/honey/kheroub/all.jpg" alt=""></div>
+                            <div class="box"><img src="img/products/honey/kaliptus/all.jpg" alt=""></div>
+                            <div class="box"><img src="img/products/honey/rbi3/all.jpg" alt=""></div>
+                            <div class="box top"><img src="img/products/honey/deghmous/all.jpg" alt=""></div>
+                            <div class="box center"><img src="img/products/honey/lemon/all.jpg" alt=""></div>
+                            <div class="box bottom"><img src="img/products/argan/all.jpg" alt=""></div>
+                            <div class="box"><img src="img/products/argan_beauty/all.jpg" alt=""></div>
+                            <div class="box"><img src="img/products/amlou/1000g.jpg" alt=""></div>
+                            <div class="box"><img src="img/products/zefaran/2g.jpg" alt=""></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text animate__animated animate__delay-1s animate__fadeInRight">
+                    <h1><b>نقاء</b> الطبيعة</h1>
+                    <h3>الراعي الرسمي للجودة</h3>
+                    <p>
+                        من واحات و جنات بلد المغرب الأصيل ، نقاء الطبيعة تنقلكم في رحلة ممتعة و مميزة ،
+                        رحلة تعبر بكم بمنتوجاتها الطبيعية الصحية ، إلى عالم السعادة و الصفاء
+                    </p>
+                </div>
+            </div>
+        </div>
+        <h2 class="main-title">منتجانتا</h2>
+        <div id="products">
+            <div id="honeyDiv" class="box">
+            <h4>500 g</h4><div class="cards">
+
+            <div class="card" product-id="2" product-lang="ar" product-price="200">
+                <div class="title">عسل الزعتر</div>
+                    <div class="content"><img src="img/products/honey/zeter/500g.jpg">
+                    <div class="btns">
+                        <i class="fa fa-2x fa-list-ul" title="معلومات حول المنتج"></i>
+                        <i class="fa fa-2x cancel-demand-i">إلغاء الطلب</i>
+                        <i class="fa fa-2x fa-shopping-cart" title="إضافة إلى السلة" product-id="2"></i>
+                    </div>
+                </div>
+                <div class="price">200 DH</div>
+                <div class="demand-info">
+                </div>
+            </div>
+
+        
+
+            <div class="card" product-id="4" product-lang="ar" product-price="150">
+                <div class="title">عسل الدغموس</div>
+                    <div class="content"><img src="img/products/honey/deghmous/500g.jpg">
+                    <div class="btns">
+                        <i class="fa fa-2x fa-list-ul" title="معلومات حول المنتج"></i>
+                        <i class="fa fa-2x cancel-demand-i">إلغاء الطلب</i>
+                        <i class="fa fa-2x fa-shopping-cart" title="إضافة إلى السلة" product-id="4"></i>
+                    </div>
+                </div>
+                <div class="price">150 DH</div>
+                <div class="demand-info">
+                </div>
+            </div>
+
+        
+
+            <div class="card" product-id="6" product-lang="ar" product-price="150">
+                <div class="title">عسل الشوكيات</div>
+                    <div class="content"><img src="img/products/honey/chawkiat/500g.jpg">
+                    <div class="btns">
+                        <i class="fa fa-2x fa-list-ul" title="معلومات حول المنتج"></i>
+                        <i class="fa fa-2x cancel-demand-i">إلغاء الطلب</i>
+                        <i class="fa fa-2x fa-shopping-cart" title="إضافة إلى السلة" product-id="6"></i>
+                    </div>
+                </div>
+                <div class="price">150 DH</div>
+                <div class="demand-info">
+                </div>
+            </div>
+
+        
+
+            <div class="card" product-id="8" product-lang="ar" product-price="125">
+                <div class="title">عسل السدر</div>
+                    <div class="content"><img src="img/products/honey/sidr/500g.jpg">
+                    <div class="btns">
+                        <i class="fa fa-2x fa-list-ul" title="معلومات حول المنتج"></i>
+                        <i class="fa fa-2x cancel-demand-i">إلغاء الطلب</i>
+                        <i class="fa fa-2x fa-shopping-cart" title="إضافة إلى السلة" product-id="8"></i>
+                    </div>
+                </div>
+                <div class="price">125 DH</div>
+                <div class="demand-info">
+                </div>
+            </div>
+
+        
+
+            <div class="card" product-id="10" product-lang="ar" product-price="100">
+                <div class="title">عسل الخروب</div>
+                    <div class="content"><img src="img/products/honey/kheroub/500g.jpg">
+                    <div class="btns">
+                        <i class="fa fa-2x fa-list-ul" title="معلومات حول المنتج"></i>
+                        <i class="fa fa-2x cancel-demand-i">إلغاء الطلب</i>
+                        <i class="fa fa-2x fa-shopping-cart" title="إضافة إلى السلة" product-id="10"></i>
+                    </div>
+                </div>
+                <div class="price">100 DH</div>
+                <div class="demand-info">
+                </div>
+            </div>
+
+        
+
+            <div class="card" product-id="12" product-lang="ar" product-price="100">
+                <div class="title">عسل الكالبتوس</div>
+                    <div class="content"><img src="img/products/honey/kaliptus/500g.jpg">
+                    <div class="btns">
+                        <i class="fa fa-2x fa-list-ul" title="معلومات حول المنتج"></i>
+                        <i class="fa fa-2x cancel-demand-i">إلغاء الطلب</i>
+                        <i class="fa fa-2x fa-shopping-cart" title="إضافة إلى السلة" product-id="12"></i>
+                    </div>
+                </div>
+                <div class="price">100 DH</div>
+                <div class="demand-info">
+                </div>
+            </div>
+
+        
+
+            <div class="card" product-id="14" product-lang="ar" product-price="75">
+                <div class="title">عسل الربيع</div>
+                    <div class="content"><img src="img/products/honey/rbi3/500g.jpg">
+                    <div class="btns">
+                        <i class="fa fa-2x fa-list-ul" title="معلومات حول المنتج"></i>
+                        <i class="fa fa-2x cancel-demand-i">إلغاء الطلب</i>
+                        <i class="fa fa-2x fa-shopping-cart" title="إضافة إلى السلة" product-id="14"></i>
+                    </div>
+                </div>
+                <div class="price">75 DH</div>
+                <div class="demand-info">
+                </div>
+            </div>
+
+        </div><h4>1Kg</h4><div class="cards">
+
+            <div class="card" product-id="1" product-lang="ar" product-price="400">
+                <div class="title">عسل الزعتر</div>
+                    <div class="content"><img src="img/products/honey/zeter/1000g.jpg">
+                    <div class="btns">
+                        <i class="fa fa-2x fa-list-ul" title="معلومات حول المنتج"></i>
+                        <i class="fa fa-2x cancel-demand-i">إلغاء الطلب</i>
+                        <i class="fa fa-2x fa-shopping-cart" title="إضافة إلى السلة" product-id="1"></i>
+                    </div>
+                </div>
+                <div class="price">400 DH</div>
+                <div class="demand-info">
+                </div>
+            </div>
+
+        
+
+            <div class="card" product-id="3" product-lang="ar" product-price="300">
+                <div class="title">عسل الدغموس</div>
+                    <div class="content"><img src="img/products/honey/deghmous/1000g.jpg">
+                    <div class="btns">
+                        <i class="fa fa-2x fa-list-ul" title="معلومات حول المنتج"></i>
+                        <i class="fa fa-2x cancel-demand-i">إلغاء الطلب</i>
+                        <i class="fa fa-2x fa-shopping-cart" title="إضافة إلى السلة" product-id="3"></i>
+                    </div>
+                </div>
+                <div class="price">300 DH</div>
+                <div class="demand-info">
+                </div>
+            </div>
+
+        
+
+            <div class="card" product-id="5" product-lang="ar" product-price="250">
+                <div class="title">عسل الشوكيات</div>
+                    <div class="content"><img src="img/products/honey/chawkiat/1000g.jpg">
+                    <div class="btns">
+                        <i class="fa fa-2x fa-list-ul" title="معلومات حول المنتج"></i>
+                        <i class="fa fa-2x cancel-demand-i">إلغاء الطلب</i>
+                        <i class="fa fa-2x fa-shopping-cart" title="إضافة إلى السلة" product-id="5"></i>
+                    </div>
+                </div>
+                <div class="price">250 DH</div>
+                <div class="demand-info">
+                </div>
+            </div>
+
+        
+
+            <div class="card" product-id="7" product-lang="ar" product-price="250">
+                <div class="title">عسل السدر</div>
+                    <div class="content"><img src="img/products/honey/sidr/1000g.jpg">
+                    <div class="btns">
+                        <i class="fa fa-2x fa-list-ul" title="معلومات حول المنتج"></i>
+                        <i class="fa fa-2x cancel-demand-i">إلغاء الطلب</i>
+                        <i class="fa fa-2x fa-shopping-cart" title="إضافة إلى السلة" product-id="7"></i>
+                    </div>
+                </div>
+                <div class="price">250 DH</div>
+                <div class="demand-info">
+                </div>
+            </div>
+
+        
+
+            <div class="card" product-id="9" product-lang="ar" product-price="200">
+                <div class="title">عسل الخروب</div>
+                    <div class="content"><img src="img/products/honey/kheroub/1000g.jpg">
+                    <div class="btns">
+                        <i class="fa fa-2x fa-list-ul" title="معلومات حول المنتج"></i>
+                        <i class="fa fa-2x cancel-demand-i">إلغاء الطلب</i>
+                        <i class="fa fa-2x fa-shopping-cart" title="إضافة إلى السلة" product-id="9"></i>
+                    </div>
+                </div>
+                <div class="price">200 DH</div>
+                <div class="demand-info">
+                </div>
+            </div>
+
+        
+
+            <div class="card" product-id="11" product-lang="ar" product-price="200">
+                <div class="title">عسل الكالبتوس</div>
+                    <div class="content"><img src="img/products/honey/kaliptus/1000g.jpg">
+                    <div class="btns">
+                        <i class="fa fa-2x fa-list-ul" title="معلومات حول المنتج"></i>
+                        <i class="fa fa-2x cancel-demand-i">إلغاء الطلب</i>
+                        <i class="fa fa-2x fa-shopping-cart" title="إضافة إلى السلة" product-id="11"></i>
+                    </div>
+                </div>
+                <div class="price">200 DH</div>
+                <div class="demand-info">
+                </div>
+            </div>
+
+        
+
+            <div class="card" product-id="13" product-lang="ar" product-price="150">
+                <div class="title">عسل الربيع</div>
+                    <div class="content"><img src="img/products/honey/rbi3/1000g.jpg">
+                    <div class="btns">
+                        <i class="fa fa-2x fa-list-ul" title="معلومات حول المنتج"></i>
+                        <i class="fa fa-2x cancel-demand-i">إلغاء الطلب</i>
+                        <i class="fa fa-2x fa-shopping-cart" title="إضافة إلى السلة" product-id="13"></i>
+                    </div>
+                </div>
+                <div class="price">150 DH</div>
+                <div class="demand-info">
+                </div>
+            </div>
+
+        
+
+            <div class="card" product-id="15" product-lang="ar" product-price="120">
+                <div class="title">عسل الليمون</div>
+                    <div class="content"><img src="img/products/honey/lemon/1000g.jpg">
+                    <div class="btns">
+                        <i class="fa fa-2x fa-list-ul" title="معلومات حول المنتج"></i>
+                        <i class="fa fa-2x cancel-demand-i">إلغاء الطلب</i>
+                        <i class="fa fa-2x fa-shopping-cart" title="إضافة إلى السلة" product-id="15"></i>
+                    </div>
+                </div>
+                <div class="price">120 DH</div>
+                <div class="demand-info">
+                </div>
+            </div>
+
+        </div></div>
+            <div id="arganDiv" class="box">
+            <h4>1000ml , 500ml , 250ml</h4><div class="cards">
+
+            <div class="card" product-id="20" product-lang="ar" product-price="600">
+                <div class="title">زيت أركان</div>
+                    <div class="content"><img src="img/products/argan/1000ml.jpg">
+                    <div class="btns">
+                        <i class="fa fa-2x fa-list-ul" title="معلومات حول المنتج"></i>
+                        <i class="fa fa-2x cancel-demand-i">إلغاء الطلب</i>
+                        <i class="fa fa-2x fa-shopping-cart" title="إضافة إلى السلة" product-id="20"></i>
+                    </div>
+                </div>
+                <div class="price">600 DH</div>
+                <div class="demand-info">
+                </div>
+            </div>
+
+        
+
+            <div class="card" product-id="21" product-lang="ar" product-price="300">
+                <div class="title">زيت أركان</div>
+                    <div class="content"><img src="img/products/argan/500ml.jpg">
+                    <div class="btns">
+                        <i class="fa fa-2x fa-list-ul" title="معلومات حول المنتج"></i>
+                        <i class="fa fa-2x cancel-demand-i">إلغاء الطلب</i>
+                        <i class="fa fa-2x fa-shopping-cart" title="إضافة إلى السلة" product-id="21"></i>
+                    </div>
+                </div>
+                <div class="price">300 DH</div>
+                <div class="demand-info">
+                </div>
+            </div>
+
+        
+
+            <div class="card" product-id="22" product-lang="ar" product-price="150">
+                <div class="title">زيت أركان</div>
+                    <div class="content"><img src="img/products/argan/250ml.jpg">
+                    <div class="btns">
+                        <i class="fa fa-2x fa-list-ul" title="معلومات حول المنتج"></i>
+                        <i class="fa fa-2x cancel-demand-i">إلغاء الطلب</i>
+                        <i class="fa fa-2x fa-shopping-cart" title="إضافة إلى السلة" product-id="22"></i>
+                    </div>
+                </div>
+                <div class="price">150 DH</div>
+                <div class="demand-info">
+                </div>
+            </div>
+
+        </div></div>
+            <div id="arganBeautyDiv" class="box">
+            <h4>250ml , 100ml , 50ml</h4><div class="cards">
+
+            <div class="card" product-id="23" product-lang="ar" product-price="170">
+                <div class="title">زيت أركان للتجميل</div>
+                    <div class="content"><img src="img/products/argan_beauty/250ml.jpg">
+                    <div class="btns">
+                        <i class="fa fa-2x fa-list-ul" title="معلومات حول المنتج"></i>
+                        <i class="fa fa-2x cancel-demand-i">إلغاء الطلب</i>
+                        <i class="fa fa-2x fa-shopping-cart" title="إضافة إلى السلة" product-id="23"></i>
+                    </div>
+                </div>
+                <div class="price">170 DH</div>
+                <div class="demand-info">
+                </div>
+            </div>
+
+        
+
+            <div class="card" product-id="24" product-lang="ar" product-price="80">
+                <div class="title">زيت أركان للتجميل</div>
+                    <div class="content"><img src="img/products/argan_beauty/100ml.jpg">
+                    <div class="btns">
+                        <i class="fa fa-2x fa-list-ul" title="معلومات حول المنتج"></i>
+                        <i class="fa fa-2x cancel-demand-i">إلغاء الطلب</i>
+                        <i class="fa fa-2x fa-shopping-cart" title="إضافة إلى السلة" product-id="24"></i>
+                    </div>
+                </div>
+                <div class="price">80 DH</div>
+                <div class="demand-info">
+                </div>
+            </div>
+
+        
+
+            <div class="card" product-id="25" product-lang="ar" product-price="40">
+                <div class="title">زيت أركان للتجميل</div>
+                    <div class="content"><img src="img/products/argan_beauty/50ml.jpg">
+                    <div class="btns">
+                        <i class="fa fa-2x fa-list-ul" title="معلومات حول المنتج"></i>
+                        <i class="fa fa-2x cancel-demand-i">إلغاء الطلب</i>
+                        <i class="fa fa-2x fa-shopping-cart" title="إضافة إلى السلة" product-id="25"></i>
+                    </div>
+                </div>
+                <div class="price">40 DH</div>
+                <div class="demand-info">
+                </div>
+            </div>
+
+        </div></div>
+            <div id="amlouDiv" class="box">
+            <h4>1Kg</h4><div class="cards">
+
+            <div class="card" product-id="16" product-lang="ar" product-price="200">
+                <div class="title">أملو باللوز وعسل الكالبتوس وزيت أركان</div>
+                    <div class="content"><img src="img/products/amlou/honey_1000g.jpg">
+                    <div class="btns">
+                        <i class="fa fa-2x fa-list-ul" title="معلومات حول المنتج"></i>
+                        <i class="fa fa-2x cancel-demand-i">إلغاء الطلب</i>
+                        <i class="fa fa-2x fa-shopping-cart" title="إضافة إلى السلة" product-id="16"></i>
+                    </div>
+                </div>
+                <div class="price">200 DH</div>
+                <div class="demand-info">
+                </div>
+            </div>
+
+        
+
+            <div class="card" product-id="18" product-lang="ar" product-price="225">
+                <div class="title">أملو باللوز بزيت أركان و بدون عسل </div>
+                    <div class="content"><img src="img/products/amlou/1000g.jpg">
+                    <div class="btns">
+                        <i class="fa fa-2x fa-list-ul" title="معلومات حول المنتج"></i>
+                        <i class="fa fa-2x cancel-demand-i">إلغاء الطلب</i>
+                        <i class="fa fa-2x fa-shopping-cart" title="إضافة إلى السلة" product-id="18"></i>
+                    </div>
+                </div>
+                <div class="price">225 DH</div>
+                <div class="demand-info">
+                </div>
+            </div>
+
+        </div><h4>500g</h4><div class="cards">
+
+            <div class="card" product-id="17" product-lang="ar" product-price="100">
+                <div class="title">أملو باللوز وعسل الكالبتوس وزيت أركان</div>
+                    <div class="content"><img src="img/products/amlou/honey_500g.jpg">
+                    <div class="btns">
+                        <i class="fa fa-2x fa-list-ul" title="معلومات حول المنتج"></i>
+                        <i class="fa fa-2x cancel-demand-i">إلغاء الطلب</i>
+                        <i class="fa fa-2x fa-shopping-cart" title="إضافة إلى السلة" product-id="17"></i>
+                    </div>
+                </div>
+                <div class="price">100 DH</div>
+                <div class="demand-info">
+                </div>
+            </div>
+
+        
+
+            <div class="card" product-id="19" product-lang="ar" product-price="110">
+                <div class="title">أملو باللوز بزيت أركان و بدون عسل </div>
+                    <div class="content"><img src="img/products/amlou/500g.jpg">
+                    <div class="btns">
+                        <i class="fa fa-2x fa-list-ul" title="معلومات حول المنتج"></i>
+                        <i class="fa fa-2x cancel-demand-i">إلغاء الطلب</i>
+                        <i class="fa fa-2x fa-shopping-cart" title="إضافة إلى السلة" product-id="19"></i>
+                    </div>
+                </div>
+                <div class="price">110 DH</div>
+                <div class="demand-info">
+                </div>
+            </div>
+
+        </div></div>
+            <div id="zafaranDiv" class="box">
+            <h4>2g</h4><div class="cards">
+
+            <div class="card" product-id="26" product-lang="ar" product-price="80">
+                <div class="title">زعفران</div>
+                    <div class="content"><img src="img/products/zefaran/2g.jpg">
+                    <div class="btns">
+                        <i class="fa fa-2x fa-list-ul" title="معلومات حول المنتج"></i>
+                        <i class="fa fa-2x cancel-demand-i">إلغاء الطلب</i>
+                        <i class="fa fa-2x fa-shopping-cart" title="إضافة إلى السلة" product-id="26"></i>
+                    </div>
+                </div>
+                <div class="price">80 DH</div>
+                <div class="demand-info">
+                </div>
+            </div>
+
+        </div></div>
+            <div id="baqatDiv" class="box">
+            <h2 class="main-title">باقاتنا</h2><div class="cards">
+
+            <div class="card" product-id="1" product-lang="ar" product-price="200">
+                <div class="title">الباقة الأولى</div>
+                    <div class="content"><img src="img/orod/orod_01.jpg">
+                    <div class="btns">
+                        <i class="fa fa-2x fa-list-ul" title="معلومات حول المنتج"></i>
+                        <i class="fa fa-2x cancel-demand-i">إلغاء الطلب</i>
+                        <i class="fa fa-2x fa-shopping-cart" title="إضافة إلى السلة" product-id="1"></i>
+                    </div>
+                </div>
+                <div class="price">200 DH</div>
+                <div class="demand-info">
+                </div>
+            </div>
+
+        
+
+            <div class="card" product-id="2" product-lang="ar" product-price="100">
+                <div class="title">الباقة الثانية</div>
+                    <div class="content"><img src="img/orod/orod_02.jpg">
+                    <div class="btns">
+                        <i class="fa fa-2x fa-list-ul" title="معلومات حول المنتج"></i>
+                        <i class="fa fa-2x cancel-demand-i">إلغاء الطلب</i>
+                        <i class="fa fa-2x fa-shopping-cart" title="إضافة إلى السلة" product-id="2"></i>
+                    </div>
+                </div>
+                <div class="price">100 DH</div>
+                <div class="demand-info">
+                </div>
+            </div>
+
+        </div></div>
+            <div id="3orodDiv" class="box">
+            <h2 class="main-title">عروضنا</h2><div class="cards">
+
+            <div class="card" product-id="1" product-lang="ar" product-price="200">
+                <div class="title">العرض الأول</div>
+                    <div class="content"><img src="img/orod/orod_01.jpg">
+                    <div class="btns">
+                        <i class="fa fa-2x fa-list-ul" title="معلومات حول المنتج"></i>
+                        <i class="fa fa-2x cancel-demand-i">إلغاء الطلب</i>
+                        <i class="fa fa-2x fa-shopping-cart" title="إضافة إلى السلة" product-id="1"></i>
+                    </div>
+                </div>
+                <div class="price">200 DH</div>
+                <div class="demand-info">
+                </div>
+            </div>
+
+        
+
+            <div class="card" product-id="2" product-lang="ar" product-price="100">
+                <div class="title">العرض الثاني</div>
+                    <div class="content"><img src="img/orod/orod_02.jpg">
+                    <div class="btns">
+                        <i class="fa fa-2x fa-list-ul" title="معلومات حول المنتج"></i>
+                        <i class="fa fa-2x cancel-demand-i">إلغاء الطلب</i>
+                        <i class="fa fa-2x fa-shopping-cart" title="إضافة إلى السلة" product-id="2"></i>
+                    </div>
+                </div>
+                <div class="price">100 DH</div>
+                <div class="demand-info">
+                </div>
+            </div>
+
+        </div></div>
+        </div>
+        <div id="footer">
+            <div class="footer-box" id="phones">
+                <h3>الهاتف</h3>
+                <span>+2126 71 65 84 87</span>
+            </div>
+            <div class="footer-box" id="adress">
+                <h3>العنوان</h3>
+                <p>
+                    El Kolea Agadir , Morroco 86356
+                </p>
+            </div>
+            <div class="footer-box" id="links">
+                <h3>روابطنا</h3>
+                    <div class="icon"><a href="https://www.facebook.com/naqaanatur/" target="_blank" title="facebook"><img src="img/icons/facebook.svg" alt=""></a></div>
+                    <div class="icon"><a href="https://www.instagram.com/naqaanature/" target="_blank" title="instagram"><img src="img/icons/instagram.svg" alt=""></a></div>
+                    <div class="icon"><a href="https://www.youtube.com/@naqaanature" target="_blank" title="youtube"><img src="img/icons/youtube.svg" alt=""></a></div>
+                    <div class="icon"><a href="https://www.tiktok.com/@naqaanature" target="_blank" title="tiktok"><img src="img/icons/tiktok.svg" alt=""></a></div>
+                    <div class="icon"><a href="https://www.snapchat.com/add/naqaanature" target="_blank" title="snapchat"><img src="img/icons/snapchat.svg" alt=""></a></div>
+                    <div class="icon"><a href="www.google.com" target="_blank" title="twitter"><img src="img/icons/twitter.svg" alt=""></a></div>
+            </div>
+			<h3>جميع الحقوق محفوظة &copy; 2024</h3>
+        </div>
+    </div>
+
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/index.js"></script>
+
+</body></html>
